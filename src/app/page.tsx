@@ -8,11 +8,14 @@ export default function Home() {
         <Image
           src="/redbricknobg.png"
           alt="Redbrick logo"
-          width={425}
-          height={425}
+          width={350}
+          height={350}
           priority
         />
-        <h1 className={styles.info}>Coming Soon</h1>
+        <h1 className={styles.info}>
+          Coming <br />
+          Soon
+        </h1>
       </main>
     </div>
   );

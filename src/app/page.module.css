@@ -24,8 +24,16 @@
   font-weight: 400;
   font-style: normal;
   color: #581417
-  
+
 }
+
+.logo { 
+  width: 425px;
+  height: 425px;
+  max-width: 80vw;
+  max-height: 80vw;
+}
+
 
 @media (prefers-color-scheme: dark) {
   .page {
