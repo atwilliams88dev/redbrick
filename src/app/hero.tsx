@@ -57,9 +57,7 @@ export default function Hero() {
             <Image
               src="/outside_sign.png"
               alt="Exterior of coffee shop"
-              className="absolute -bottom-6 -right-6 rounded-xl shadow-lg border-4 border-white"
-              width={300}     // Adjust relative size
-              height={200}
+              className="absolute -bottom-6 -right-6 w-1/3 rounded-xl shadow-lg border-4 border-white"
               priority         // Optional: important hero visual
             />
           </div>
