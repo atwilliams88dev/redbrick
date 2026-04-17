@@ -19,7 +19,7 @@ export default function FoodMenu() {
       <div className="relative overflow-hidden pt-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Image
-            src="/menu.png"           // Use absolute path from /public
+            src="/menu.jpg"           // Use absolute path from /public
             alt="Menu screenshot"
             width={2432}              // Original image width
             height={1442}             // Original image height
