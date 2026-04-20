@@ -15,7 +15,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Redbrick Coffee & Deli",
   description: "Redbrick Coffee & Deli offers a warm, comfortable atmosphere with handcrafted coffee drinks, fresh deli sandwiches, salads, and pizza",
-
 };
 
 export default function RootLayout({
