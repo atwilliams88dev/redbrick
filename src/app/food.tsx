@@ -19,12 +19,12 @@ export default function FoodMenu() {
       <div className="relative overflow-hidden pt-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Image
-            src="/menu.jpg"           // Use absolute path from /public
+            src="/menu_new.jpg"
             alt="Menu screenshot"
-            width={2432}              // Original image width
-            height={1442}             // Original image height
-            className="rounded-xl shadow-2xl ring-1 ring-gray-900/10"
-            priority                  // Optional: preload menu for faster LCP
+            width={2432}
+            height={1442}
+            className="w-[75%] mx-auto rounded-xl shadow-2xl ring-1 ring-gray-900/10"
+            priority
           />
         </div>
       </div>
