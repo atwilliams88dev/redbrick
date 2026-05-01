@@ -1,5 +1,11 @@
 'use client'
-
+function AnnouncementBanner() {
+  return (
+    <div className="ml-auto mr-auto bg-red-700 text-white text-center py-10 px-10 text-sm md:text-base font-medium">
+      🎉 We’re closing early today to celebrate our local prom! Thanks for your support ❤️
+    </div>
+  );
+}
 export default function Header() {
   return (
     <header>
@@ -29,6 +35,8 @@ export default function Header() {
               alt="Redbrick Coffee & Deli"
             />
           </a>
+          <AnnouncementBanner/>
+          
 
           {/* HOURS (hidden on small screens, right aligned on md+) */}
           <div className="md:flex flex-col text-right text-gray-700 text-sm font-sans font-bold leading-tight ml-auto mr-6">

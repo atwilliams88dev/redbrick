@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: "Redbrick Coffee & Deli offers a warm, comfortable atmosphere with handcrafted coffee drinks, fresh deli sandwiches, salads, and pizza",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
 <body className={`${geistSans.variable} ${geistMono.variable}`}>
+
         {children}
       </body>
     </html>
