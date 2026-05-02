@@ -41,7 +41,9 @@ export default function Header() {
           {/* HOURS (hidden on small screens, right aligned on md+) */}
           <div className="md:flex flex-col text-right text-gray-700 text-sm font-sans font-bold leading-tight ml-auto mr-6">
             <div><span>Mon–Thu: 7:00am–3:00pm</span></div>
-            <div><span>Fri & Sat: 7:00am–7:00pm</span></div>
+            <div><span>Fri 7:00am–8:00pm</span></div>
+            <div><span>Sat 7:00am–3:00pm</span></div>
+
           </div>
 
           {/* ORDER BUTTON */}
