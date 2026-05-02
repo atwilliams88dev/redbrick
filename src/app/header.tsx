@@ -35,7 +35,7 @@ export default function Header() {
               alt="Redbrick Coffee & Deli"
             />
           </a>
-          <AnnouncementBanner/>
+          {/* <AnnouncementBanner/> */}
           
 
           {/* HOURS (hidden on small screens, right aligned on md+) */}
