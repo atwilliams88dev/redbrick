@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { ShoppingBag, MapPin, Bike } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -27,7 +28,8 @@ export default function Hero() {
                 href="https://redbrick-coffee-deli.square.site"
                 className="inline-flex items-center rounded-md bg-red-900 px-6 py-3 text-base font-semibold text-white shadow hover:bg-red-800 transition"
               >
-                Order Online
+                <ShoppingBag className="h-5 w-5 shrink-0 mr-3" />
+                Order Pickup or Delivery
               </a>
 
               <a
@@ -36,8 +38,23 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center rounded-md border border-red-900 px-6 py-3 text-base font-semibold text-red-900 hover:bg-red-50 transition"
               >
-                Directions
+                      <MapPin className="h-5 w-5 shrink-0 mr-3" />
+
+Directions
               </a>
+            </div>
+            {/* SUBTLE DELIVERY NOTE */}
+
+            <div className="mt-4 flex items-center gap-2 text-sm text-gray-600">
+
+              <Bike className="h-4 w-4 text-red-900 " />
+
+              <span>
+
+                Delivery now available in Salem
+
+              </span>
+
             </div>
           </div>
 
