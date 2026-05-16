@@ -23,10 +23,10 @@ export default function Hero() {
               handcrafted coffee drinks, fresh deli sandwiches, salads, and pizza.
             </p>
 
-            <div className="mt-8 flex gap-4">
+            <div className="mt-8 column md:flex gap-4">
               <a
                 href="https://redbrick-coffee-deli.square.site"
-                className="inline-flex items-center rounded-md bg-red-900 px-6 py-3 text-base font-semibold text-white shadow hover:bg-red-800 transition"
+                className=" block md:inline-flex my-3 items-center rounded-md bg-red-900 px-6 py-3 text-base font-semibold text-white shadow hover:bg-red-800 transition"
               >
                 <ShoppingBag className="h-5 w-5 shrink-0 mr-3" />
                 Order Pickup
@@ -34,7 +34,7 @@ export default function Hero() {
 
               <a
                 href="https://www.doordash.com/store/red-brick-coffee-&-deli-salem-44802063/109386948/"
-                className="inline-flex items-center rounded-md bg-red-900 px-6 py-3 text-base font-semibold text-white shadow hover:bg-red-800 transition"
+                className="block md:inline-flex my-3 items-center rounded-md bg-red-900 px-6 py-3 text-base font-semibold text-white shadow hover:bg-red-800 transition"
               >
                 <Car className="h-5 w-5 shrink-0 mr-3" />
                 Order Delivery
@@ -44,7 +44,7 @@ export default function Hero() {
                 href="https://www.google.com/maps/dir/?api=1&destination=100+N+Washington+St,+Salem,+IL+62881"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-md border border-red-900 px-6 py-3 text-base font-semibold text-red-900 hover:bg-red-50 transition"
+                className="block md:inline-flex my-3 items-center rounded-md border border-red-900 px-6 py-3 text-base font-semibold text-red-900 hover:bg-red-50 transition"
               >
                       <MapPin className="h-5 w-5 shrink-0 mr-3" />
 
