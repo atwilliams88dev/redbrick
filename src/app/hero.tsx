@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { ShoppingBag, MapPin, Bike } from 'lucide-react'
+import { ShoppingBag, MapPin, Car, Bike } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -29,7 +29,15 @@ export default function Hero() {
                 className="inline-flex items-center rounded-md bg-red-900 px-6 py-3 text-base font-semibold text-white shadow hover:bg-red-800 transition"
               >
                 <ShoppingBag className="h-5 w-5 shrink-0 mr-3" />
-                Order Pickup or Delivery
+                Order Pickup
+              </a>
+
+              <a
+                href="https://www.doordash.com/store/red-brick-coffee-&-deli-salem-44802063/109386948/"
+                className="inline-flex items-center rounded-md bg-red-900 px-6 py-3 text-base font-semibold text-white shadow hover:bg-red-800 transition"
+              >
+                <Car className="h-5 w-5 shrink-0 mr-3" />
+                Order Delivery
               </a>
 
               <a
@@ -43,6 +51,7 @@ export default function Hero() {
 Directions
               </a>
             </div>
+            
             {/* SUBTLE DELIVERY NOTE */}
 
             <div className="mt-4 flex items-center gap-2 text-sm text-gray-600">
