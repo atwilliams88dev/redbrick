@@ -1,4 +1,7 @@
 'use client'
+
+import { Phone } from "lucide-react";
+
 function AnnouncementBanner() {
   return (
     <div className="ml-auto mr-auto bg-red-700 text-white text-center py-10 px-10 text-sm md:text-base font-medium">
@@ -40,19 +43,12 @@ export default function Header() {
 
           {/* HOURS (hidden on small screens, right aligned on md+) */}
           <div className="md:flex flex-col text-right text-gray-700 text-sm font-sans font-bold leading-tight ml-auto mr-6">
+          <div className="mb-3"><a className=" text-black" href="tel:16187409060">Phone: (618) 740-9060</a></div>
+
             <div><span>Mon–Thu: 7:00am–3:00pm</span></div>
             <div><span>Fri 7:00am–8:00pm</span></div>
             <div><span>Sat 7:00am–3:00pm</span></div>
-
           </div>
-
-          {/* ORDER BUTTON */}
-          <a
-            href="https://redbrick-coffee-deli.square.site"
-            className="rounded-md bg-red-900 px-4 sm:px-5 py-2 text-sm font-semibold text-white shadow hover:bg-red-800 transition whitespace-nowrap"
-          >
-            Order
-          </a>
         </div>
       </nav>
     </header>
