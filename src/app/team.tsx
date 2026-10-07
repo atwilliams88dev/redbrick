@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 
 const people = [
@@ -22,27 +20,21 @@ const people = [
 
 export default function TeamSection() {
   return (
-    <section className="py-24 sm:py-32">
-      <div className="mx-auto bg-white rounded p-4 border-2 border-red-900 max-w-7xl px-6 lg:px-8">
-        
-        {/* Header */}
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-4xl font-serif font-bold tracking-tight text-red-900 sm:text-5xl">
-            Our Management Team
-          </h2>
-          <p className="mt-6 text-lg font-serif italic text-gray-700">
-            A passionate group dedicated to crafting the best coffee, fresh food, and great experiences for our guests.
-          </p>
+    <section className="bg-[#f8f3eb] px-6 py-20 lg:px-8 lg:py-28" aria-labelledby="team-heading">
+      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+        <div>
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-red-700">Good food. Good people.</p>
+          <h2 id="team-heading" className="mt-2 font-serif text-4xl font-bold tracking-tight text-red-950 sm:text-5xl">A local place built to feel like yours.</h2>
+          <p className="mt-6 text-lg leading-8 text-stone-600">We’re proud to serve Salem with handcrafted drinks, satisfying food, and the kind of friendly service that makes stopping in—or ordering ahead—easy.</p>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=100+N+Washington+St,+Salem,+IL+62881" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex rounded-full border border-red-900/25 bg-white px-6 py-3.5 font-bold text-red-950 shadow-sm transition hover:bg-red-50">Visit us in downtown Salem</a>
         </div>
-
-        {/* Team Grid */}
         <ul
           role="list"
-          className="mx-auto mt-20 grid max-w-5xl grid-cols-2 gap-x-8 gap-y-16 text-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
+          className="grid grid-cols-2 gap-5 text-center sm:grid-cols-3"
         >
           {people.map((person) => (
-            <li key={person.name} className="flex flex-col items-center">
-              <div className="bg-white rounded-full p-1 shadow-sm border border-red-900/20">
+            <li key={person.name} className="flex flex-col items-center rounded-3xl border border-red-900/10 bg-white p-5 shadow-sm">
+              <div className="rounded-full border border-red-900/20 bg-white p-1 shadow-sm">
                 <Image
                   src={person.imageUrl}
                   alt={person.name}
@@ -53,8 +45,8 @@ export default function TeamSection() {
                   priority={false} // team images can lazy-load
                 />
               </div>
-              <h3 className="mt-6 text-base font-serif font-bold text-red-900">{person.name}</h3>
-              <p className="text-sm font-serif text-gray-700 italic">{person.role}</p>
+              <h3 className="mt-5 font-serif text-base font-bold text-red-950">{person.name}</h3>
+              <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-stone-500">{person.role}</p>
             </li>
           ))}
         </ul>

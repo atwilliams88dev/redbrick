@@ -1,9 +1,16 @@
 import { SVGProps } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { MapPin, Phone, ShoppingBag } from "lucide-react";
+import { WeeklyHours } from "./business-hours";
 
 const navigation = {
   footer: [
-    { name: 'Menu', href: '#menu' },
-    { name: 'Order Online', href: 'https://redbrick-coffee-deli.square.site' },
+    { name: 'Full Menu', href: '/menu', internal: true },
+    { name: 'Popular Picks', href: '/#specials' },
+    { name: 'Customer Reviews', href: '/#reviews' },
+    { name: 'Visit & Hours', href: '/visit', internal: true },
+    { name: 'Order Online', href: 'https://redbrick-coffee-deli.square.site/' },
   ],
   social: [
     {
@@ -36,26 +43,28 @@ const navigation = {
 };
   export default function Footer() {
     return (
-      <footer className="bg-white border-t border-red-900/20">
-        <div className="mx-auto max-w-7xl px-6 py-16">
+      <footer className="border-t border-red-900/15 bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
   
-          <div className="grid gap-12 md:grid-cols-3">
+          <div className="grid gap-12 lg:grid-cols-[1fr_1.5fr]">
+            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-1">
             
             {/* Brand */}
             <div className="space-y-4">
-              <img
+              <Image
                 src="/redbricknobg.png"
                 alt="Redbrick Coffee & Deli"
-                className="h-16 w-auto"
+                className="h-20 w-20 rounded-full object-cover"
+                width={80}
+                height={80}
               />
-              <p className="text-sm text-gray-600">
-                A warm, comfortable place for great coffee, fresh deli favorites,
-                salads, and pizza in the heart of Salem.
+              <p className="max-w-sm text-sm leading-6 text-stone-600">
+                Handcrafted coffee, deli sandwiches, salads, and pizza in the heart of downtown Salem, Illinois.
               </p>
-              <p className="text-sm text-gray-600">
-                <strong>100 N Washington St</strong><br />
-                Salem, IL 62881
-              </p>
+              <div className="space-y-2 text-sm font-semibold text-stone-600">
+                <a href="https://maps.google.com/?q=100+N+Washington+St,+Salem,+IL+62881" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 transition hover:text-red-900"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-red-800" aria-hidden="true" />100 N Washington St<br />Salem, IL 62881</a>
+                <a href="tel:16187409060" className="flex items-center gap-2 transition hover:text-red-900"><Phone className="h-4 w-4 text-red-800" aria-hidden="true" />(618) 740-9060</a>
+              </div>
             </div>
   
             {/* Navigation */}
@@ -66,12 +75,11 @@ const navigation = {
               <ul className="mt-4 space-y-3">
                 {navigation.footer.map((item) => (
                   <li key={item.name}>
-                    <a
-                      href={item.href}
-                      className="text-sm text-gray-600 hover:text-red-900 transition"
-                    >
-                      {item.name}
-                    </a>
+                    {'internal' in item && item.internal ? (
+                      <Link href={item.href} className="text-sm font-semibold text-stone-600 transition hover:text-red-900">{item.name}</Link>
+                    ) : (
+                      <a href={item.href} className="text-sm font-semibold text-stone-600 transition hover:text-red-900">{item.name}</a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -87,6 +95,8 @@ const navigation = {
                   <a
                     key={item.name}
                     href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-red-900 hover:text-red-700 transition"
                   >
                     <span className="sr-only">{item.name}</span>
@@ -94,15 +104,18 @@ const navigation = {
                   </a>
                 ))}
               </div>
+              <a href="https://redbrick-coffee-deli.square.site/" className="mt-6 inline-flex items-center gap-2 rounded-full bg-red-900 px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-red-800"><ShoppingBag className="h-4 w-4" aria-hidden="true" /> Order pickup</a>
             </div>
+            </div>
+
+            <WeeklyHours />
   
           </div>
   
           {/* Bottom */}
-          <div className="mt-12 border-t border-red-900/20 pt-6 text-center">
-            <p className="text-sm text-gray-500">
-              © {new Date().getFullYear()} Redbrick Coffee & Deli. All rights reserved.
-            </p>
+          <div className="mt-12 flex flex-col gap-2 border-t border-red-900/15 pt-6 text-sm text-stone-500 sm:flex-row sm:items-center sm:justify-between">
+            <p>© {new Date().getFullYear()} Redbrick Coffee & Deli. All rights reserved.</p>
+            <p>Locally owned in Salem, Illinois.</p>
           </div>
   
         </div>

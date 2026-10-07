@@ -41,11 +41,11 @@
   flex-direction: column;
   gap: 32px;
   grid-row-start: 1;
-  padding-top: 0px
+  padding-top: 88px;
 }
 @media (min-width: 1000px) {
   .main {
-    padding-top: 100px;
+    padding-top: 108px;
   }
 }
 
@@ -172,11 +172,5 @@ a.secondary {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
   }
 }
